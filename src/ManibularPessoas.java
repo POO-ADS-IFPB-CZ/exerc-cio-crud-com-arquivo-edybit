@@ -29,6 +29,11 @@ public class ManibularPessoas {
         }
     }
 
+    private void deletarPessoas(String email){
+       pessoas.removeIf(pessoa -> pessoa.getEmail().equals(email));
+       salvaPessoas();
+    }
+
     private void carregarPessoas() {
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(arquivo))) {
             pessoas = (Set<Pessoa>) ois.readObject();

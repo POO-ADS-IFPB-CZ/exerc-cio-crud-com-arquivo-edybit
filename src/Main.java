@@ -35,6 +35,12 @@ public class Main {
                     System.out.println("Saindo...");
                     scanner.close();
                     return;
+                case 4:
+                    System.out.println("Pessoa Deletada :");
+                    for (Pessoa p : gerenciador.listaPessoas()) {
+                        System.out.println(p);
+                    }
+                    break;
                 default:
                     System.out.println("Opção inválida.");
             }
